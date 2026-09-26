@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffd6e7, #f7c8ff, #d9e7ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.pantalla {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.pantalla.activa {
+    display: flex;
+}
+
+.tarjeta {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255,255,255,0.94);
+    padding: 35px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    animation: aparecer 0.6s ease;
+}
+
+h1 {
+    color: #d63384;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #c2185b;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 12px 0;
+}
+
+button {
+    border: none;
+    background: #ff5c9a;
+    color: white;
+    padding: 14px 25px;
+    margin: 10px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: #e83e8c;
+}
+
+.emoji-grande {
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+.botones {
+    margin-top: 25px;
+}
+
+#resultado {
+    font-weight: bold;
+    color: #d63384;
+    min-height: 30px;
+}
+
+#opciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#opciones button {
+    width: 80%;
+}
+
+.cajas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.cajas button {
+    font-size: 45px;
+    background: transparent;
+    padding: 10px;
+}
+
+.cajas button:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.mensaje-final {
+    background: #fff0f6;
+    padding: 20px;
+    border-radius: 20px;
+    color: #c2185b;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .tarjeta {
+        padding: 25px 18px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una sorpresa para ti 💗</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <div class="corazones"></div>
+
+    <!-- INICIO -->
+    <section id="inicio" class="pantalla activa">
+        <div class="tarjeta">
+            <div class="emoji-grande">💌</div>
+
+            <h1>Holaaaa 💗</h1>
+
+            <p>
+                Preparé algo especial para ti...
+            </p>
+
+            <p>
+                Pero tendrás que pasar unas pequeñas pruebas 😏
+            </p>
+
+            <button onclick="mostrar('encuesta')">
+                Comenzar 💕
+            </button>
+        </div>
+    </section>
+
+
+    <!-- ENCUESTA -->
+    <section id="encuesta" class="pantalla">
+
+        <div class="tarjeta">
+
+            <h2>💕 Primera prueba</h2>
+
+            <p id="pregunta"></p>
+
+            <div class="botones">
+                <button onclick="responder('si')">SÍ 💗</button>
+                <button onclick="responder('no')">NO 😳</button>
+            </div>
+
+            <p id="resultado"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SORPRESA -->
+    <section id="sorpresa" class="pantalla">
+
+        <div class="tarjeta">
+
+            <div class="emoji-grande">🎁</div>
+
+            <h2>¡Encontraste una sorpresa!</h2>
+
+            <p id="mensajeSorpresa">
+                Tengo algo que decirte...
+            </p>
+
+            <button onclick="mostrar('juego')">
+                Siguiente juego 🎮
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- JUEGO -->
+    <section id="juego" class="pantalla">
+
+        <div class="tarjeta">
+
+            <h2>🎮 ¿Qué tanto me conoces?</h2>
+
+            <p id="preguntaJuego"></p>
+
+            <div id="opciones"></div>
+
+            <p id="resultadoJuego"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SORPRESAS -->
+    <section id="cajas" class="pantalla">
+
+        <div class="tarjeta">
+
+            <h2>🎁 Elige una sorpresa</h2>
+
+            <p>Solo puedes escoger una 👀</p>
+
+            <div class="cajas">
+
+                <button onclick="abrirSorpresa(1)">🎁</button>
+
+                <button onclick="abrirSorpresa(2)">🎁</button>
+
+                <button onclick="abrirSorpresa(3)">🎁</button>
+
+            </div>
+
+            <p id="sorpresaFinal"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+    <section id="final" class="pantalla">
+
+        <div class="tarjeta">
+
+            <div class="emoji-grande">💖</div>
+
+            <h1>Terminaste 🥹</h1>
+
+            <p>
+                Si llegaste hasta aquí...
+            </p>
+
+            <p>
+                significa que completaste todas las pruebas. 💕
+            </p>
+
+            <p class="mensaje-final">
+                Gracias por formar parte de mis días
+                y por todos los momentos bonitos.
+                💗
+            </p>
+
+            <h2>Te amo muchisimo 💕</h2>
+
+            <button onclick="reiniciar()">
+                Volver a empezar 🔄
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
